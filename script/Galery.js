@@ -1,7 +1,6 @@
 let night = document.querySelector('.logo img'); 
 $("#feedback_button").click(function() {
     $("form").addClass('active');
-    console.log('я сосал меня ебали');
 });
 $("#close_form").click(function() {
     $("form").removeClass('active');

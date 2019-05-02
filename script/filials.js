@@ -1,12 +1,12 @@
+let night = document.querySelector('.logo img'); 
 function soundClick(event) {
     event.preventDefault();
     var audio = new Audio(); 
     audio.src = "audio/phone.wav"; 
     audio.autoplay = true; 
-let night = document.querySelector('.logo img'); 
-}$("#feedback_button").click(function() {
+}
+$("#feedback_button").click(function() {
     $("form").addClass('active');
-    console.log('я сосал меня ебали');
 });
 $("#close_form").click(function() {
     $("form").removeClass('active');

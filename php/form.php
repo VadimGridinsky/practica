@@ -1,4 +1,13 @@
 <?php
+$recepient="goldencobra228@yandex.ru";
+ $sitename = "AJAX практос";
+
+ $login = trim($_POST["login"]);
+ $Email = trim($_POST["Email"]);
+ $text = trim($_POST["text"]);
+ $message = "Логин: $login \nПочта: $Email \nТекст: $text";
+ $pagetitle = "Новая заявка с сайта \"$sitename\"";
+ mail($recepient, $pagetitle, $message, "Content-type: text/plain; charset=\"utf-8\"\n From: $recepient");
 $servername = "localhost";
 $database = "form";
 $username = "root";
@@ -12,12 +21,9 @@ if (!$conn) {
 echo 'Connected successfully';
 $login = $_POST['login'];
 $Email = $_POST['Email'];
-$message = $_POST['message'];
+$text = $_POST['text'];
 
-$sql = "INSERT INTO autoschool (login, Email, message) VALUES('$login', '$Email', '$message')";
-if (mysqli_query($conn, $sql)) {
-      exit('<meta http-equiv="refresh" content="0; url=http://practos/index.html" />');
-}
+$sql = "INSERT INTO autoschool (login, Email, message) VALUES('$login', '$Email', '$text')";
 mysqli_close($conn);
 
 ?>

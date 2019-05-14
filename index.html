@@ -13,13 +13,13 @@
 
  <body>
      
-        <form action="php/form.php" method="post" id="osForm" >
-            <button type="button" id="close_form">Х</button>
-            <input type="text"  name="login" placeholder="Введите ваше имя" required pattern="[A-Za-z0-9]{1,20}">
-            <input type="email" name="Email" placeholder="Введите электронный адрес" required pattern="{1,30}" >
-            <textarea name="message" cols="40" rows="6" placeholder="Введите ваше сообщение"required pattern="[A-Za-z]{1,255}[А-Яа-я]" ></textarea>
-            <button class="submit" type="submit" onclick="AjaxFormRequest('messegeResult', 'formMain', 'form.php')"/>Отправить сообщение</button>
-        </form>
+        <form  method="post" id="osForm" >
+                <button type="button" id="close_form">Х</button>
+                <input type="text"  name="login" placeholder="Введите ваше имя" required pattern="[A-Za-z0-9]{1,20}">
+                <input type="email" name="Email" placeholder="Введите электронный адрес" required pattern="{1,30}" >
+                <textarea name="text" cols="40" rows="6" placeholder="Введите ваше сообщение"required pattern="[A-Za-z]{1,255}[А-Яа-я]" ></textarea>
+                <button  class="submit" type="submit">Отправить сообщение</button>
+            </form>
 
     <header>
          <div class="header-container">
@@ -164,5 +164,6 @@
            
             <script src="script/jquery.js"></script>
             <script src="script/script.js"></script>
+            <script src="script/Ajax.js"></script>
  </body>
  </html>

@@ -1,5 +1,2 @@
 RemoveHandler .html .htm
 AddType application/x-httpd-php .php .htm .html .phtml
-<IfModule dir_module>
-    DirectoryIndex index.php
-</IfModule>
